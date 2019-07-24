@@ -4,7 +4,7 @@
     <!-- 绘制登录盒子 -->
     <div class="login-box">
       <div class="content">
-        <img src="./logo_index.png" />
+        <img src="../../assets/img/logo_index.png" />
         <!-- 用element-UI绘制表单 -->
         <!-- 表单校验：：
           el-form标签设置属性:rules="任意命名"，
@@ -75,9 +75,9 @@ export default {
       btnLoading: false,
       // 设置表单数据
       loginForm: {
-        mobile: '',
-        code: '',
-        xieyi: false
+        mobile: '17713090563',
+        code: '246810',
+        xieyi: true
       },
       // 设置校验
       loginFormRules: {
@@ -172,7 +172,7 @@ export default {
 // 登录页面，整体大盒子
 .login-container {
   height: 100%;
-  background-image: url("./login_bg.jpg");
+  background-image: url("../../assets/img/login_bg.jpg");
   background-size: cover;
   // 设置登录盒子居中显示
   display: flex;

@@ -10,7 +10,18 @@ var router = new Router({
     // 设置登录的请求路由
     { path: '/login', name: 'login', component: () => import('@/views/login') },
     // 设置后台首页请求路由
-    { path: '/home', name: 'home', component: () => import('@/views/home') }
+    {
+      path: '/home',
+      name: 'home',
+      component: () => import('@/views/home'),
+      // 重定向，登录进后台界面，就显示后台首页
+      redirect: '/welcome',
+      // 右下侧的部分都是home的子组件
+      children: [
+        { path: '/welcome', name: 'welcome', component: () => import('@/views/welcome') } // 后台首页
+      ]
+
+    }
   ]
 })
 
